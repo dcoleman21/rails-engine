@@ -74,22 +74,29 @@ describe "Items API" do
 
   it "can create a new item" do
     merchant = create(:merchant)
-    item_params = ({
-      name: 'Hydro Flask',
-      description: '32oz water stainless steel water bottle',
+    item_attr = {
+      name: "Hydro Flask",
+      description: "32oz water stainless steel water bottle",
       unit_price: 75.0,
       merchant_id: merchant.id
-      })
+    }
     headers = {"CONTENT_TYPE" => "application/json"}
 
-    post '/api/v1/items', headers: headers, params: JSON.generate(item: item_params)
+    post '/api/v1/items', headers: headers, params: JSON.generate(item_attr)
 
-    created_item = Item.last
+    new_item = Item.last
 
     expect(response).to be_successful
-    expect(created_item.name).to eq(item_params[:name])
-    expect(created_item.description).to eq(item_params[:description])
-    expect(created_item.unit_price).to eq(item_params[:unit_price])
-    expect(created_item.merchant_id).to eq(item_params[:merchant_id])
+    expect(new_item.name).to eq(item_attr[:name])
+    expect(new_item.description).to eq(item_attr[:description])
+    expect(new_item.unit_price).to eq(item_attr[:unit_price])
+    expect(new_item.merchant_id).to eq(item_attr[:merchant_id])
+  end
+
+  it "can update an existing item" do
+    id = create(:item).id
+    previous_name = Item.last.name
+    item_params = { name: "Limited Addition Hydro Flask" }
+    headers = {"CONTENT_TYPE" => "application/json"}
   end
 end
