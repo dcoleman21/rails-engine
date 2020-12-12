@@ -85,7 +85,6 @@ describe "Items API" do
     post '/api/v1/items', headers: headers, params: JSON.generate(item_attr)
 
     new_item = Item.last
-
     expect(response).to be_successful
     expect(new_item.name).to eq(item_attr[:name])
     expect(new_item.description).to eq(item_attr[:description])
@@ -96,7 +95,26 @@ describe "Items API" do
   it "can update an existing item" do
     id = create(:item).id
     previous_name = Item.last.name
-    item_params = { name: "Limited Addition Hydro Flask" }
+    item_attr = { name: "Limited Addition Hydro Flask" }
     headers = {"CONTENT_TYPE" => "application/json"}
+
+    patch "/api/v1/items/#{id}", headers: headers, params: JSON.generate(item_attr)
+    item = Item.find_by(id: id)
+
+    expect(response).to be_successful
+    expect(item.name).to_not eq(previous_name)
+    expect(item.name).to eq("Limited Addition Hydro Flask")
+  end
+
+  it "can destroy an item" do
+    item = create(:item)
+
+    expect(Item.count).to eq(1)
+    expect { delete "/api/v1/items/#{item.id}" }.to change(Item, :count).by(-1)
+
+    expect(response).to be_successful
+    expect(Item.count).to eq(0)
+    expect{Item.find(item.id)}.to raise_error(ActiveRecord::RecordNotFound)
+    expect(response.status).to eq(204)
   end
 end
