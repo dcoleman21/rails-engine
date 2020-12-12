@@ -2,7 +2,7 @@ require 'faker'
 
 FactoryBot.define do
   factory :item do
-    name { Faker::Name.unique.name }
+    name { Faker::Commerce.product_name }
     description { Faker::Lorem.sentence }
     unit_price { Faker::Commerce.price }
     merchant

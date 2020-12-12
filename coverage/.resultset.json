@@ -1,102 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/customer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/models/invoice_item_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice_item.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/models/invoice_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/models/item_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/item.rb": {
         "lines": [
           1,
@@ -111,22 +15,10 @@
           null
         ]
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/models/merchant_spec.rb": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/application_record.rb": {
         "lines": [
           1,
-          null,
           1,
-          1,
-          2,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
           null
         ]
       },
@@ -143,46 +35,141 @@
           null
         ]
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/models/transaction_spec.rb": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           null,
           1,
           1,
-          2,
           null,
           null,
           1,
-          2,
+          1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
           2,
           null,
           null
         ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/customer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice_item.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/transaction.rb": {
         "lines": [
-          1,
-          1,
+          0,
+          0,
           null,
-          1,
-          1,
-          null
-        ]
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/spec/requests/api/v1/items/items_request_spec.rb": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/jobs/application_job.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1607720703
+    "timestamp": 1607811936
   }
 }
