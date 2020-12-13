@@ -2,7 +2,7 @@ require 'faker'
 
 FactoryBot.define do
   factory :merchant do
-    name { Faker::GreekPhilosophers.name }
+    name { Faker::Company.name }
 
     trait :with_items do
       transient do
