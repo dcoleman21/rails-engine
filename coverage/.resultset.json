@@ -1,6 +1,60 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice_item.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/item.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/merchant.rb": {
         "lines": [
           1,
@@ -14,14 +68,17 @@
           null
         ]
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/application_record.rb": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/transaction.rb": {
         "lines": [
+          1,
+          1,
+          null,
           1,
           1,
           null
         ]
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
           1,
@@ -58,11 +115,70 @@
           null
         ]
       },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/items/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/merchant_serializer.rb": {
         "lines": [
           1,
           1,
           1,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/merchants/items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -76,118 +192,8 @@
         "branches": {
         }
       },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/item.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/customer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/invoice_item.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/models/transaction.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/item_serializer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/jobs/application_job.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/items_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
           0,
           0
         ],
@@ -215,6 +221,6 @@
         }
       }
     },
-    "timestamp": 1607883081
+    "timestamp": 1607891239
   }
 }
