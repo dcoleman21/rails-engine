@@ -123,6 +123,24 @@
           null
         ]
       },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/items/merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
@@ -151,14 +169,6 @@
           1,
           2,
           null,
-          null
-        ]
-      },
-      "/Users/danischoolcomputer/turing/Mod3_2/projects/rails-engine/rails-engine/app/serializers/merchant_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null
         ]
       },
@@ -211,6 +221,6 @@
         }
       }
     },
-    "timestamp": 1607886755
+    "timestamp": 1607891239
   }
 }
