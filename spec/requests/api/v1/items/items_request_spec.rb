@@ -22,19 +22,19 @@ describe "Items API" do
       expect(item).to have_key(:attributes)
       expect(item[:attributes]).to be_a(Hash)
 
-      item_data = item[:attributes]
+      item_attr = item[:attributes]
 
-      expect(item_data).to have_key(:name)
-      expect(item_data[:name]).to be_a(String)
+      expect(item_attr).to have_key(:name)
+      expect(item_attr[:name]).to be_a(String)
 
-      expect(item_data).to have_key(:description)
-      expect(item_data[:description]).to be_a(String)
+      expect(item_attr).to have_key(:description)
+      expect(item_attr[:description]).to be_a(String)
 
-      expect(item_data).to have_key(:unit_price)
-      expect(item_data[:unit_price]).to be_a(Float)
+      expect(item_attr).to have_key(:unit_price)
+      expect(item_attr[:unit_price]).to be_a(Float)
 
-      expect(item_data).to have_key(:merchant_id)
-      expect(item_data[:merchant_id]).to be_an(Integer)
+      expect(item_attr).to have_key(:merchant_id)
+      expect(item_attr[:merchant_id]).to be_an(Integer)
     end
   end
 
