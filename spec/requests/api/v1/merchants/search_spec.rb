@@ -33,4 +33,24 @@ describe "Merchant Search Endpoints" do
     expect(merchant_attr).to have_key(:name)
     expect(merchant_attr[:name]).to eq("Thompson")
   end
+
+  it "can find all merchants that contain a fragment, case insensitive" do
+    create(:merchant, name: "Thompson")
+    create(:merchant, name: "Johnson")
+    create(:merchant, name: "Son")
+    create(:merchant, name: "Thatcher")
+
+    get '/api/v1/merchants/find_all?name=SON'
+
+    expect(response).to be_successful
+
+    merch_with_son = JSON.parse(response.body, symbolize_names: true)
+
+    expect(merch_with_son).to be_a(Hash)
+
+    results = merch_with_son[:data]
+
+    expect(results).to be_an(Array)
+    expect(results.count).to eq(3)
+  end
 end
