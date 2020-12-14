@@ -1,6 +1,11 @@
 class Api::V1::Merchants::SearchController < ApplicationController
   def show
-    merchants = Merchant.where("name ilike ?", "%#{params[:name]}%").limit(1).first
+    merchant = Merchant.find_by("name ilike ?", "%#{params[:name]}%")
+    render json: MerchantSerializer.new(merchant)
+  end
+
+  def index
+    merchants = Merchant.where("name ilike ?", "%#{params[:name]}%")
     render json: MerchantSerializer.new(merchants)
   end
 end
