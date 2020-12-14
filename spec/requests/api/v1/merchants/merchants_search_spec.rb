@@ -15,20 +15,20 @@ describe "Merchant Search Endpoints" do
 
     expect(json).to be_a(Hash)
 
-    name = json[:data]
+    merch_name = json[:data]
 
-    expect(name).to be_an(Hash)
+    expect(merch_name).to be_a(Hash)
 
-    expect(name).to have_key(:id)
-    expect(name[:id]).to be_a(String)
+    expect(merch_name).to have_key(:id)
+    expect(merch_name[:id]).to be_a(String)
 
-    expect(name).to have_key(:type)
-    expect(name[:type]).to eq("merchant")
+    expect(merch_name).to have_key(:type)
+    expect(merch_name[:type]).to eq("merchant")
 
-    expect(name).to have_key(:attributes)
-    expect(name[:attributes]).to be_a(Hash)
+    expect(merch_name).to have_key(:attributes)
+    expect(merch_name[:attributes]).to be_a(Hash)
 
-    merchant_attr = name[:attributes]
+    merchant_attr = merch_name[:attributes]
 
     expect(merchant_attr).to have_key(:name)
     expect(merchant_attr[:name]).to eq("Thompson")
