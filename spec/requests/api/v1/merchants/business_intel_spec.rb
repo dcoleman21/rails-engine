@@ -98,5 +98,28 @@ describe "Business Intelligence Endpoints" do
       expect(merchants[4][:attributes][:name]).to eq(@m3.name)
       expect(merchants[5][:attributes][:name]).to eq(@m2.name)
     end
+
+    it "can get total revenue across all merchants between given dates" do
+      get '/api/v1/revenue?start=2020-03-03&end=2020-05-05'
+
+      expect(response).to be_successful
+
+      json = JSON.parse(response.body, symbolize_names: true)
+      rev_by_dates = json[:data]
+
+      expect(rev_by_dates).to be_a(Hash)
+      
+      expect(rev_by_dates).to have_key(:type)
+      expect(rev_by_dates[:type]).to eq("revenue")
+
+      expect(rev_by_dates).to have_key(:attributes)
+      expect(rev_by_dates[:attributes]).to be_a(Hash)
+
+      total_rev = rev_by_dates[:attributes]
+
+      expect(total_rev).to have_key(:revenue)
+      expect(total_rev[:revenue]).to be_a(Float)
+      expect(total_rev[:revenue]).to eq(2450.0)
+    end
   end
 end
