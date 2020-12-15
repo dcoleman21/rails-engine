@@ -60,6 +60,7 @@ describe "Business Intelligence Endpoints" do
 
       expect(merchants[0][:attributes]).to have_key(:name)
       expect(merchants[0][:attributes][:name]).to be_a(String)
+
       expect(merchants[0][:attributes][:name]).to eq(@m7.name)
       expect(merchants[1][:attributes][:name]).to eq(@m6.name)
       expect(merchants[2][:attributes][:name]).to eq(@m5.name)
@@ -67,6 +68,35 @@ describe "Business Intelligence Endpoints" do
       expect(merchants[4][:attributes][:name]).to eq(@m3.name)
       expect(merchants[5][:attributes][:name]).to eq(@m2.name)
       expect(merchants[6][:attributes][:name]).to eq(@m1.name)
+    end
+
+    it "can get merchants with most items sold" do
+      get '/api/v1/merchants/most_items?quantity=6'
+
+      expect(response).to be_successful
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      merchants = json[:data]
+
+      expect(merchants).to be_an(Array)
+      expect(merchants.length).to eq(6)
+
+      expect(merchants[0]).to have_key(:id)
+      expect(merchants[0][:id]).to be_a(String)
+
+      expect(merchants[0]).to have_key(:attributes)
+      expect(merchants[0]).to be_a(Hash)
+
+      expect(merchants[0][:attributes]).to have_key(:name)
+      expect(merchants[0][:attributes][:name]).to be_a(String)
+
+      expect(merchants[0][:attributes][:name]).to eq(@m7.name)
+      expect(merchants[1][:attributes][:name]).to eq(@m6.name)
+      expect(merchants[2][:attributes][:name]).to eq(@m5.name)
+      expect(merchants[3][:attributes][:name]).to eq(@m4.name)
+      expect(merchants[4][:attributes][:name]).to eq(@m3.name)
+      expect(merchants[5][:attributes][:name]).to eq(@m2.name)
     end
   end
 end
