@@ -5,13 +5,13 @@ describe "Business Intelligence Endpoints" do
     before :each do
       @m1, @m2, @m3, @m4, @m5, @m6, @m7 = create_list(:merchant, 7)
 
-      @it1 = create(:item, merchant: @m1)
-      @it2 = create(:item, merchant: @m2)
-      @it3 = create(:item, merchant: @m3)
-      @it4 = create(:item, merchant: @m4)
-      @it5 = create(:item, merchant: @m5)
-      @it6 = create(:item, merchant: @m6)
-      @it7 = create(:item, merchant: @m7)
+      @it1 = create(:item, merchant: @m1) # "Kerluke, Stiedemann and Hilper", id: 458
+      @it2 = create(:item, merchant: @m2) # "Strosin, Heidenreich and Kulas", id: 459
+      @it3 = create(:item, merchant: @m3) # "Fahey-Jaskolski", id: 460
+      @it4 = create(:item, merchant: @m4) # "Abshire-Macejkovic" id: 461
+      @it5 = create(:item, merchant: @m5) # "Monahan, Legros and Kirlin", id: 462
+      @it6 = create(:item, merchant: @m6) # "Mueller, Mante and O'Keefe", id: 463
+      @it7 = create(:item, merchant: @m7) # "Tillman, Stiedemann and Okuneva", id: 464
 
       @iv1 = create(:invoice, merchant: @m1, status: 'shipped', created_at: '2020-01-01T00:00:00 UTC')
       @iv2 = create(:invoice, merchant: @m2, status: 'shipped', created_at: '2020-02-02T00:00:00 UTC')
@@ -26,8 +26,8 @@ describe "Business Intelligence Endpoints" do
       @ii3 = create(:invoice_item, invoice: @iv3, item: @it3, quantity: 30, unit_price: 5)
       @ii4 = create(:invoice_item, invoice: @iv4, item: @it4, quantity: 40, unit_price: 7)
       @ii5 = create(:invoice_item, invoice: @iv5, item: @it5, quantity: 50, unit_price: 9)
-      @ii6 = create(:invoice_item, invoice: @iv6, item: @it6, quantity: 50, unit_price: 9)
-      @ii7 = create(:invoice_item, invoice: @iv7, item: @it7, quantity: 50, unit_price: 9)
+      @ii6 = create(:invoice_item, invoice: @iv6, item: @it6, quantity: 60, unit_price: 11)
+      @ii7 = create(:invoice_item, invoice: @iv7, item: @it7, quantity: 70, unit_price: 13)
 
       @t1 = create(:transaction, invoice: @iv1, result: 'success')
       @t2 = create(:transaction, invoice: @iv2, result: 'success')
@@ -43,7 +43,7 @@ describe "Business Intelligence Endpoints" do
       expect(response).to be_successful
 
       json = JSON.parse(response.body, symbolize_names: true)
-      
+
       merchants = json[:data]
 
       expect(merchants).to be_an(Array)
