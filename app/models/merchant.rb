@@ -30,16 +30,23 @@ class Merchant < ApplicationRecord
       .joins(invoices: [:invoice_items, :transactions])
       .merge(Transaction.unscoped.successful)
       .merge(Invoice.unscoped.successful)
-      .group(:id).order('quantity_of_items DESC')
+      .group(:id)
+      .order('quantity_of_items DESC')
       .limit(quantity)
   end
 
-  def self.total_revenue(id)
-    select("merchants.id, sum(invoice_items.unit_price * invoice_items.quantity) as revenue")
-      .joins(invoices: [:transactions, :invoice_items])
-      .merge(Transaction.unscoped.successful)
-      .merge(Invoice.unscoped.successful)
-      .where({invoices: {merchant_id: id} })
-      .group("merchants.id").first
+  def self.total_revenue(_id)
+    select("merchants.id")
+      .joins(invoices: %i[invoice_items transactions])
+      .merge(Invoice.successful)
+      .merge(Transaction.successful)
+      .sum('invoice_items.quantity * invoice_items.unit_price')
   end
+  # Failure/Error: object.total
+  #
+  #    NoMethodError:
+  #      undefined method `total' for 2520.0:Float
+  #    # ./app/serializers/revenue_serializer.rb:5:in `block in <class:RevenueSerializer>'
+  #    # ./app/controllers/api/v1/merchants/business_controller.rb:18:in `merchant_revenue'
+  #    # ./spec/requests/api/v1/merchants/business_intel_spec.rb:126:in `block (3 levels) in <top (required)>'
 end
