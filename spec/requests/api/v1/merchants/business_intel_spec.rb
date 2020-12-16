@@ -108,7 +108,7 @@ describe "Business Intelligence Endpoints" do
       rev_by_dates = json[:data]
 
       expect(rev_by_dates).to be_a(Hash)
-      
+
       expect(rev_by_dates).to have_key(:type)
       expect(rev_by_dates[:type]).to eq("revenue")
 
@@ -120,6 +120,16 @@ describe "Business Intelligence Endpoints" do
       expect(total_rev).to have_key(:revenue)
       expect(total_rev[:revenue]).to be_a(Float)
       expect(total_rev[:revenue]).to eq(2450.0)
+    end
+
+    xit "can get total revenue for a single merchant" do
+      get "/api/v1/merchants/#{@m2.id}/revenue"
+
+      expect(response).to be_successful
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(data).to be_a(Hash)
     end
   end
 end
