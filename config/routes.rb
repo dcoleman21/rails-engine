@@ -13,8 +13,12 @@ Rails.application.routes.draw do
         get '/find', to: 'search#show'
         get '/find_all', to: 'search#index'
         get '/:id/items', to: 'items#index'
+        get '/most_revenue', to: 'business#most_revenue'
+        get '/most_items', to: 'business#most_items'
+        get '/:id/revenue', to: 'business#merchant_revenue'
       end
       resources :merchants
+      get '/revenue', to: 'merchants/business#rev_by_dates'
     end
   end
 end
