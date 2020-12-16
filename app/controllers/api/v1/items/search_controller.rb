@@ -1,11 +1,9 @@
 class Api::V1::Items::SearchController < ApplicationController
   def show
-    item = Item.find_by("name ilike ?", "%#{params[:name]}%")
-    render json: ItemSerializer.new(item)
+    render json: ItemSerializer.new(Item.single_item(params[:name]))
   end
 
   def index
-    items = Item.where("name ilike ?", "%#{params[:name]}%")
-    render json: ItemSerializer.new(items)
+    render json: ItemSerializer.new(Item.multiple_items(params[:name]))
   end
 end
