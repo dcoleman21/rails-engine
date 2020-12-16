@@ -7,6 +7,14 @@ class Merchant < ApplicationRecord
 
   validates :name, presence: true
 
+  def self.single_merchant(name)
+    Merchant.find_by("name ilike ?", "%#{name}%")
+  end
+
+  def self.multiple_merchants(name)
+    Merchant.where("name ilike ?", "%#{name}%")
+  end
+
   def self.most_revenue(quantity)
     joins(invoices: [:transactions, :invoice_items])
      .select("merchants.*, sum(invoice_items.quantity * invoice_items.unit_price) as most_revenue")
