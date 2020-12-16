@@ -36,7 +36,7 @@ class Merchant < ApplicationRecord
   end
 
   def self.total_revenue(id)
-    select("merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) AS total")
+    select("merchants.id, merchants.name, SUM(invoice_items.quantity * invoice_items.unit_price) AS total")
       .joins(invoices: %i[invoice_items transactions])
       .merge(Invoice.successful)
       .merge(Transaction.successful)
