@@ -16,26 +16,30 @@ class Merchant < ApplicationRecord
   end
 
   def self.most_revenue(quantity)
-    joins(invoices: [:transactions, :invoice_items])
-     .select("merchants.*, sum(invoice_items.quantity * invoice_items.unit_price) as most_revenue")
-     .where("invoices.status='shipped' AND transactions.result='success'")
-     .group("merchants.id")
-     .order("most_revenue DESC")
-     .limit(quantity)
+    select("merchants.*, SUM(invoice_items.quantity * invoice_items.unit_price) AS revenue")
+      .joins(invoices: [:invoice_items, :transactions])
+      .merge(Transaction.unscoped.successful)
+      .merge(Invoice.unscoped.successful)
+      .group(:id)
+      .order('revenue DESC')
+      .limit(quantity)
   end
 
   def self.most_sold_items(quantity)
-    joins(invoices: [:transactions, :invoice_items])
-     .select("merchants.*, sum(invoice_items.quantity) as most_sold_items")
-     .where("invoices.status='shipped' AND transactions.result='success'")
-     .group("merchants.id")
-     .order("most_sold_items DESC")
-     .limit(quantity)
+    select("merchants.*, SUM(invoice_items.quantity) AS quantity_of_items")
+      .joins(invoices: [:invoice_items, :transactions])
+      .merge(Transaction.unscoped.successful)
+      .merge(Invoice.unscoped.successful)
+      .group(:id).order('quantity_of_items DESC')
+      .limit(quantity)
   end
 
-  # def self.total_revenue(id)
-  #   joins(invoices: [:invoice_items, :transactions])
-  #     .where("invoices.status='shipped' AND transactions.result='success' AND #{id: id}")
-  #     .sum("invoice_items.quantity * invoice_items.unit_price")
-  # end
+  def self.total_revenue(id)
+    select("merchants.id, sum(invoice_items.unit_price * invoice_items.quantity) as revenue")
+      .joins(invoices: [:transactions, :invoice_items])
+      .merge(Transaction.unscoped.successful)
+      .merge(Invoice.unscoped.successful)
+      .where({invoices: {merchant_id: id} })
+      .group("merchants.id").first
+  end
 end
