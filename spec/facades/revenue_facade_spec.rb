@@ -14,14 +14,13 @@ describe "Revenue Facade" do
     @it7 = create(:item, merchant: @m7) # "Tillman, Stiedemann and Okuneva", id: 464
 
     # one invoice for each merchant, status=shipped, also set the created_at
-    @iv1 = create(:invoice, merchant: @m1, status: 'shipped')
-    @iv2 = create(:invoice, merchant: @m2, status: 'shipped')
-    @iv3 = create(:invoice, merchant: @m3, status: 'shipped')
-    @iv4 = create(:invoice, merchant: @m4, status: 'shipped')
-    @iv5 = create(:invoice, merchant: @m5, status: 'shipped')
-    @iv6 = create(:invoice, merchant: @m6, status: 'shipped')
-    @iv7 = create(:invoice, merchant: @m7, status: 'packaged')
-
+    @iv1 = create(:invoice, merchant: @m1, status: 'shipped', created_at: '2020-01-01T00:00:00 UTC')
+    @iv2 = create(:invoice, merchant: @m2, status: 'shipped', created_at: '2020-02-02T00:00:00 UTC')
+    @iv3 = create(:invoice, merchant: @m3, status: 'shipped', created_at: '2020-03-03T00:00:00 UTC')
+    @iv4 = create(:invoice, merchant: @m4, status: 'shipped', created_at: '2020-04-04T00:00:00 UTC')
+    @iv5 = create(:invoice, merchant: @m5, status: 'shipped', created_at: '2020-05-05T00:00:00 UTC')
+    @iv6 = create(:invoice, merchant: @m6, status: 'shipped', created_at: '2020-05-05T00:00:00 UTC')
+    @iv7 = create(:invoice, merchant: @m7, status: 'packaged', created_at: '2020-05-05T00:00:00 UTC')
     # one invoice_item for each invoice, low quantity and price to high quantity and price
     @ii1 = create(:invoice_item, invoice: @iv1, item: @it1, quantity: 10, unit_price: 1) # rev: $10
     @ii2 = create(:invoice_item, invoice: @iv2, item: @it2, quantity: 20, unit_price: 3) # rev: $60
@@ -42,9 +41,12 @@ describe "Revenue Facade" do
   end
 
   xit "returns revenue betweeen given dates" do
-     revenue = RevenueFacade.rev_by_dates('dates')
-     expect(revenue).to be_a(Revenue)
-     expect(revenue.id).to eq(nil)
-     expect(revenue.revenue).to be_a(Float)
+    start_date = '2020-01-01'
+    end_date = '2020-02-02'
+    dates = ("#{start_date}, #{end_date}")
+    revenue = RevenueFacade.rev_by_dates(dates)
+    expect(revenue).to be_a(Revenue)
+    expect(revenue.id).to eq(nil)
+    expect(revenue.revenue).to be_a(Float)
   end
 end
