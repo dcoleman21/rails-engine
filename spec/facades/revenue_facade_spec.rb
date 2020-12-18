@@ -40,13 +40,13 @@ describe "Revenue Facade" do
     @t7 = create(:transaction, invoice: @iv7, result: 'success')
   end
 
-  xit "returns revenue betweeen given dates" do
-    start_date = '2020-01-01'
-    end_date = '2020-02-02'
-    dates = ("#{start_date}, #{end_date}")
-    revenue = RevenueFacade.rev_by_dates(dates)
-    expect(revenue).to be_a(Revenue)
-    expect(revenue.id).to eq(nil)
-    expect(revenue.revenue).to be_a(Float)
-  end
+  # xit "returns revenue betweeen given dates" do
+  #   start_date = '2020-01-01'
+  #   end_date = '2020-02-02'
+  #   dates = ("#{start_date}, #{end_date}")
+  #   revenue = RevenueFacade.rev_by_dates(dates)
+  #   expect(revenue).to be_a(Revenue)
+  #   expect(revenue.id).to eq(nil)
+  #   expect(revenue.revenue).to be_a(Float)
+  # end
 end
