@@ -111,6 +111,8 @@ Both consoles will be running simultaneously. You will use the following command
 bundle exec rspec
 ```
 
+<img width="625" alt="rails-engine test coverage" src="https://user-images.githubusercontent.com/60626984/102561159-36472580-4091-11eb-8fa3-45a3cd14a13c.png">
+
 <!-- CONTACT -->
 ## Contact
 
