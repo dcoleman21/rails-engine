@@ -50,9 +50,13 @@ Rails Engine is an E-Commerce Application using a service-oriented architecture.
 ## Getting Started
 
 - In your terminal, create a directory called  `rails-engine`
-  * `mkdir rails-engine`
+  ```sh
+  mkdir rails-engine
+  ```
 - Next you will want to `cd` into this new directory
-  * `cd rails-engine`
+```sh
+cd rails-engine
+```
 
 ### Installation
 
@@ -72,13 +76,17 @@ Rails Engine is an E-Commerce Application using a service-oriented architecture.
    - `cd` into your forked repo and open up atom
    - follow the set up instructions located in the README
 3. Since this is using service-oriented architecture, you will need to run both of these simultaneously. I found that having four separate tabs open in my terminal helps with this. So you will have your `rails-engine` running in one tab, you will then run `rails s` in another tab. You will want to have `rails_driver` open in another tab and in your final tab you will run `rails s -p 3001`.
-  - `rails-engine` -> `rails s`
-  - `rails_driver` -> `rails s -p 3001`
+```sh
+rails-engine -> rails s
+```
+```sh
+rails_driver -> rails s -p 3001
+```  
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the [postman](rails-engine-postman_collection.json) file located in the file tree.
+In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree.
 
 ### Database Schema
 
@@ -90,8 +98,12 @@ Below you will see a diagaram showing the relationships for all of the tables
 ## Testing
 
 For this project you will need to run the tests for both your `rails-engine` and also run the spec harness tests for `rails_driver`.
-- `rails-engine` will use `rails s`
-- `rails_driver` will use `rails s -p 3001`
+```sh
+rails-engine will use rails s
+```
+```sh
+rails_driver will use rails s -p 3001
+```
 
 Both running simultaneously.
 
@@ -106,7 +118,7 @@ Project Link: [Rails Engine](https://github.com/dcoleman21/rails-engine)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/dcoleman21/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/dcoleman21/rails-engine.svg?style=for-the-badge
 [contributors-url]: https://github.com/dcoleman21/rails-engine/graphs/contributors
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
