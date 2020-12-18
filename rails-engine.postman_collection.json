@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "7e2e26c3-b932-48ff-9da6-ff4fe7363122",
+		"name": "rails-engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make request to get all items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items"
+					]
+				},
+				"description": "/api/v1/items"
+			},
+			"response": []
+		},
+		{
+			"name": "Make request to get an item by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items/66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						"66"
+					]
+				},
+				"description": "/api/v1/items/66"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new item",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Hydro Flask\",\n    \"description\": \"32oz water stainless steel water bottle\",\n    \"unit_price\": 75.0,\n    \"merchant_id\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items/2501",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						"2501"
+					]
+				},
+				"description": "Ex: Post: /api/v1/items/2501"
+			},
+			"response": []
+		},
+		{
+			"name": "Destroy an item and associated data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items/2501",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						"2501"
+					]
+				},
+				"description": "Delete: /api/v1/items/2501"
+			},
+			"response": []
+		},
+		{
+			"name": "Make request to get all merchants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants"
+					]
+				},
+				"description": "/api/v1/merchants"
+			},
+			"response": []
+		},
+		{
+			"name": "Make request to a merchant by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"20"
+					]
+				},
+				"description": "/api/v1/merchants/20"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new merchant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dani LLC\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						""
+					]
+				},
+				"description": "/api/v1/merchants/"
+			},
+			"response": []
+		},
+		{
+			"name": "Destroy a merchant and associated data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						""
+					]
+				},
+				"description": "/api/v1/merchants/\nThe above path will have an id based on what was created with the post request"
+			},
+			"response": []
+		},
+		{
+			"name": "Return all items associated with a merchant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/:id/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						":id",
+						"items"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "/api/v1/merchants/:id/items\nEnter in the specific id you want to return"
+			},
+			"response": []
+		},
+		{
+			"name": "Returns the merchant associated with an item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items/:id/merchants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						":id",
+						"merchants"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "/api/v1/items/:id/merchants"
+			},
+			"response": []
+		},
+		{
+			"name": "Multi-Finder: returns all merchants that match a set of criteria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/find_all?name=SON",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"find_all"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "SON"
+						}
+					]
+				},
+				"description": "/api/v1/merchants/find_all?name=SON\nCriteria will be input through query parameters."
+			},
+			"response": []
+		},
+		{
+			"name": "Single-Finder: return a single merchant that matches a set of criteria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/find?name=son",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"find"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "son"
+						}
+					]
+				},
+				"description": "/api/v1/merchants/find?name=son\nCriteria will be input through query parameters."
+			},
+			"response": []
+		},
+		{
+			"name": "Returns a variable number of merchants ranked by total revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/most_revenue?quantity=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"most_revenue"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "7"
+						}
+					]
+				},
+				"description": "/api/v1/merchants/most_revenue?quantity=7"
+			},
+			"response": []
+		},
+		{
+			"name": "Multi-Finder: returns all items that match a set of criteria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/items/find_all?name=ink",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"items",
+						"find_all"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ink"
+						}
+					]
+				},
+				"description": "/api/v1/items/find_all?name=ink\nCriteria will be input through query parameters."
+			},
+			"response": []
+		},
+		{
+			"name": "Returns a variable number of merchants ranked by total number of items sold",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/most_items?quantity=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"most_items"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "8"
+						}
+					]
+				},
+				"description": "/api/v1/merchants/most_items?quantity=x\nx is the number of merchants to be returned."
+			},
+			"response": []
+		},
+		{
+			"name": "Returns the total revenue across all merchants between the given dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/revenue?start=2020-03-03&end=2020-05-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"",
+						"api",
+						"v1",
+						"revenue"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-03-03"
+						},
+						{
+							"key": "end",
+							"value": "2020-05-05"
+						}
+					]
+				},
+				"description": "/api/v1/revenue?start=2020-03-03&end=2020-05-05\nYou can plug in whatever dates for start and end"
+			},
+			"response": []
+		},
+		{
+			"name": "Return the total revenue for a single merchant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/merchants/2/revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"merchants",
+						"2",
+						"revenue"
+					]
+				},
+				"description": "/api/v1/merchants/2/revenue\n2 is where you would put a merchants id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
