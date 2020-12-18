@@ -98,14 +98,18 @@ Below you will see a diagaram showing the relationships for all of the tables
 ## Testing
 
 For this project you will need to run the tests for both your `rails-engine` and also run the spec harness tests for `rails_driver`.
+The tests for `rails-engine` will be written by you using OOP, encapsulation and abstraction. We want to make sure that we are using SRP.
 ```sh
 rails-engine will use rails s
 ```
+The tests for `rails_driver` have already been written.
 ```sh
 rails_driver will use rails s -p 3001
 ```
-
-Both running simultaneously.
+Both consoles will be running simultaneously. You will use the following command to run the tests:
+```sh
+bundle exec rspec
+```
 
 <!-- CONTACT -->
 ## Contact
