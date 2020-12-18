@@ -78,7 +78,7 @@ Rails Engine is an E-Commerce Application using a service-oriented architecture.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree.
+In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the [postman](rails-engine-postman_collection.json) file located in the file tree.
 
 ### Database Schema
 
@@ -100,47 +100,14 @@ Both running simultaneously.
 
 Dani Coleman - [LinkedIn](https://www.linkedin.com/in/dcoleman-21/)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [Rails Engine](https://github.com/dcoleman21/rails-engine)
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/dcoleman21/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/dcoleman21/repo/graphs/contributors
+[contributors-url]: https://github.com/dcoleman21/rails-engine/graphs/contributors
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/dcoleman-21/
-
-
-
-
-
-
-
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
