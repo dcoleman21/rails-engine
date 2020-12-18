@@ -77,9 +77,9 @@ describe Merchant do
         expect(Merchant.most_sold_items(6)).to eq([@m6, @m5, @m4, @m3, @m2, @m1])
       end
 
-      xit "returns a single merchants total revenue" do
-        expect(Merchant.total_revenue("#{@m4.id}")).to eq(280)
-      end
+      # xit "returns a single merchants total revenue" do
+      #   expect(Merchant.total_revenue("#{@m4.id}")).to eq(280)
+      # end
     end
   end
 end
