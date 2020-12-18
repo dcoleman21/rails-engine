@@ -117,4 +117,13 @@ describe "Items API" do
     expect{Item.find(item.id)}.to raise_error(ActiveRecord::RecordNotFound)
     expect(response.status).to eq(204)
   end
+
+  it "cannot destroy an item without an id" do
+    item = create(:item, id: 4)
+
+    delete "/api/v1/items/2"
+
+    expect(response.status).to_not eq(200)
+    expect(response.status).to eq(204)
+  end
 end

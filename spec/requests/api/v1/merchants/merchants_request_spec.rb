@@ -92,4 +92,12 @@ describe "Merchants API" do
     expect{Merchant.find(merchant.id)}.to raise_error(ActiveRecord::RecordNotFound)
     expect(response.status).to eq(204)
   end
+
+  it "cannot destroy a merchant without an id" do
+    merchant = create(:merchant, id: 5)
+    delete "/api/v1/merchants/3"
+
+    expect(response.status).to_not eq(200)
+    expect(response.status).to eq(204)
+  end
 end
