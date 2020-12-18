@@ -88,7 +88,7 @@ rails_driver -> rails s -p 3001
 
 In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree.
 
-### Database Schema
+## Database Schema
 
 Below you will see a diagaram showing the relationships for all of the tables
 
