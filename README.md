@@ -1,5 +1,6 @@
 
 [![Contributors][contributors-shield]][contributors-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 # Rails Engine
 
@@ -21,11 +22,9 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#database-schema">Database Schema</a></li>
+    <li><a href="#testing">Testing</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -55,10 +54,6 @@ Rails Engine is an E-Commerce Application using a service-oriented architecture.
 - Next you will want to `cd` into this new directory
   * `cd rails-engine`
 
-
-
-
-
 ### Installation
 
 1. Fork this repo and put it into your `rails-engine` directory
@@ -83,73 +78,39 @@ Rails Engine is an E-Commerce Application using a service-oriented architecture.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In this project you will be building multiple endpoints. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree. 
+In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree.
 
+### Database Schema
 
+Below you will see a diagaram showing the relationships for all of the tables
 
-
+![rails-engine](https://user-images.githubusercontent.com/60626984/102558905-c71b0280-408b-11eb-9252-b1816d72f428.png)
 
 <!-- ROADMAP -->
-## Roadmap
+## Testing
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+For this project you will need to run the tests for both your `rails-engine` and also run the spec harness tests for `rails_driver`.
+- `rails-engine` will use `rails s`
+- `rails_driver` will use `rails s -p 3001`
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
+Both running simultaneously.
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Dani Coleman - [LinkedIn](https://www.linkedin.com/in/dcoleman-21/)
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/dcoleman21/repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/dcoleman21/repo/graphs/contributors
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-url]: https://linkedin.com/in/dcoleman-21/
 
 
 
