@@ -86,7 +86,7 @@ rails_driver -> rails s -p 3001
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like, you can refere to the `rails-engine-postman_collection.json` file located in the file tree.
+In this project you will be building multiple endpoints for merchants and items. To see what these endpoints should look like and implement them, you can refere to the `rails-engine-postman_collection.json` file located in the file tree and import that into Postman.
 
 ## Database Schema
 
