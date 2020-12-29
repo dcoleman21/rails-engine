@@ -39,9 +39,9 @@ describe "Items API" do
   end
 
   it "can get a single item by its id" do
-    id = create(:item).id
+    item = create(:item)
 
-    get "/api/v1/items/#{id}"
+    get "/api/v1/items/#{item.id}"
 
     json = JSON.parse(response.body, symbolize_names: true)
     item = json[:data]
