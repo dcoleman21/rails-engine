@@ -21,7 +21,7 @@ class Merchant < ApplicationRecord
       .merge(Transaction.successful)
       .merge(Invoice.successful)
       .group(:id)
-      .order('revenue DESC')
+      .order(revenue: :desc)
       .limit(quantity)
   end
 
@@ -31,7 +31,7 @@ class Merchant < ApplicationRecord
       .merge(Transaction.successful)
       .merge(Invoice.successful)
       .group(:id)
-      .order('quantity_of_items DESC')
+      .order(quantity_of_items: :desc)
       .limit(quantity)
   end
 
@@ -40,7 +40,7 @@ class Merchant < ApplicationRecord
       .joins(invoices: %i[invoice_items transactions])
       .merge(Invoice.successful)
       .merge(Transaction.successful)
-      .where("merchant_id = #{id}")
+      .where(id: id)
       .group(:id).first
   end
 end
