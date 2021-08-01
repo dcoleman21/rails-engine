@@ -67,7 +67,7 @@ cd rails-engine
    - `cd` into your forked repo and open up atom
    - You will then run `bundle install` to load all of the gems
    - Then you will need to run:
-    - `rake db:data`; This will create, migrate and seed your database
+    - `rake db:{create,migrate,seed}`; This will create, migrate and seed your database
 2. You will also need to put the Front end portion of this project (Rails Driver) into the `rails-engine` directory you created
   - Fork [this](https://github.com/turingschool-examples/rails_driver) repo
    ```sh
